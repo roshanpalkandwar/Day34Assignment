@@ -11,7 +11,7 @@ namespace Day34Assignment
     {
         private static SqlConnection ConnectionSetup()
         {
-            return new SqlConnection(@"Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Employee_Payroll_Service1;Integrated Security=True");
+            return new SqlConnection("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Employee_Payroll_Service1;Integrated Security=True");
 
         }
 

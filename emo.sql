@@ -44,8 +44,8 @@ begin
 	@NetPay,@City,@Country)
 end
 
-DROP TABLE Employee_Payroll
-DROP PROCEDURE SpAddEmployeedetails
+DROP TABLE Salary
+DROP PROCEDURE SpUpdateEmployeeSalary
 
 CREATE TABLE Salary
 (
