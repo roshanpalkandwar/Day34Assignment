@@ -62,3 +62,18 @@ SELECT * FROM Salary
 INSERT INTO Salary VALUES (1,'Bruce','HR','Jan',12000)
 INSERT INTO Salary VALUES (2,'Riya','Sales','May',15000)
 INSERT INTO Salary VALUES (3,'terisa','Management','June',10000)
+
+CREATE PROCEDURE SpUpdateEmployeeSalary
+(	
+	@id int,
+	@month varchar(10),
+	@salary int,
+	@empid int
+)
+as
+begin
+	UPDATE Salary
+	SET EmployeeSalary=@salary WHERE SalaryID=@id and Month=@month and EmployeeID=@empid
+	SELECT e.EmployeeID, e.EmployeeName, s.JobDescription, s.EmployeeSalary, s.Month, s.SalaryID
+	FROM Employee_Payroll e INNER JOIN Salary s ON e.EmployeeID=s.EmployeeID WHERE s.SalaryID=@id
+end
